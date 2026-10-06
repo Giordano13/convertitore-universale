@@ -1,0 +1,65 @@
+name: Crea setup Windows (bozza)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Estrai i sorgenti del progetto
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath Convertitore_GitHub.zip -DestinationPath . -Force
+          Remove-Item -LiteralPath Convertitore_GitHub.zip
+      - name: Configura il canale del repository
+        run: python tools/configure_release.py --github "$env:GITHUB_REPOSITORY"
+      - name: Installa librerie per compilare
+        run: python -m pip install -r requirements.txt -r requirements-build.txt
+      - name: Verifica la sintassi PowerShell
+        shell: powershell
+        run: |
+          $files = @('tools/setup_source.ps1', 'tools/install_source.ps1', 'installer/install_components.ps1')
+          foreach ($file in $files) {
+            $tokens = $null; $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count) { $errors | Format-List; exit 1 }
+          }
+      - name: Test della ricerca Python e dei log
+        shell: powershell
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File tests/test_source_worker.ps1
+          powershell -NoProfile -ExecutionPolicy Bypass -File tests/test_component_exit.ps1
+      - name: Test degli aggiornamenti e della struttura
+        env:
+          PYTHONPATH: app
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          python -m unittest discover -s tests -p test_distribution.py -v
+          python -m unittest discover -s tests -p test_launcher.py -v
+      - name: Test dell'interfaccia
+        env:
+          PYTHONPATH: app
+          QT_QPA_PLATFORM: offscreen
+        run: python -m unittest discover -s tests -p test_gui.py -v
+      - name: Installa Inno Setup
+        run: choco install innosetup -y --no-progress
+      - name: Compila app e setup
+        run: python tools/build_release.py
+      - name: Prepara il file degli aggiornamenti
+        shell: pwsh
+        run: |
+          $version = python -c "import sys;sys.path.insert(0,'app');from version import VERSION;print(VERSION)"
+          $download = "https://github.com/$env:GITHUB_REPOSITORY/releases/download/v$version/ConvertitoreUniversale-Setup-$version.exe"
+          python tools/make_manifest.py --installer "output/ConvertitoreUniversale-Setup-$version.exe" --download-url "$download" --output output/update.json
+      - name: Conserva i file da revisionare
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: Convertitore-Windows-da-verificare
+          path: output/*
+          retention-days: 14
