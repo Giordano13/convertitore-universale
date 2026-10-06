@@ -12,11 +12,13 @@ Il setup richiede Internet. FFmpeg, LibreOffice e Tesseract vengono installati t
 
 ## Installer Windows
 
-Il workflow **Crea setup Windows (bozza)** estrae i sorgenti e compila l installer EXE su Windows. I risultati sono scaricabili dagli artifact della relativa esecuzione. La release EXE sara pubblicata dopo la compilazione e la verifica del setup.
+Il setup EXE della versione 2.1.2 è disponibile nella [release di anteprima](https://github.com/Giordano13/convertitore-universale/releases/tag/v2.1.2). Scarica **ConvertitoreUniversale-Setup-2.1.2.exe** dagli allegati e avvialo per scegliere i componenti. Non serve estrarre uno ZIP.
+
+La build Windows e i 21 test di interfaccia, distribuzione e avvio sono passati. L’installazione su un PC reale richiede ancora verifica. Il workflow **Crea setup Windows (bozza)** permette di compilare le versioni successive.
 
 ## Sorgenti e aggiornamenti
 
-Lo ZIP contiene tutti i sorgenti, i test, la documentazione, il setup e i modelli OCR con relativa provenienza e licenza. Gli aggiornamenti sono predisposti per questo repository. Il canale diventera operativo quando verra pubblicato il manifesto della prima release.
+Lo ZIP contiene tutti i sorgenti, i test, la documentazione, il setup e i modelli OCR con relativa provenienza e licenza. Gli aggiornamenti sono predisposti per questo repository. Il canale è attivo tramite `release/update.json`; il programma controlla la versione e verifica dimensione e SHA256 del setup prima di avviarlo.
 
 ## Licenza
 
