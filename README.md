@@ -20,4 +20,4 @@ Lo ZIP contiene tutti i sorgenti, i test, la documentazione, il setup e i modell
 
 ## Licenza
 
-La licenza del codice del progetto deve ancora essere scelta dall autore. Le dipendenze conservano le proprie licenze; nello ZIP sono incluse le informazioni per la distribuzione. La pubblicazione di questo repository non assegna automaticamente una licenza al codice.
+Il codice del progetto e distribuito con licenza **GNU AGPLv3**. Leggi [LICENSE](./LICENSE). Le dipendenze conservano le proprie licenze; gli avvisi e le informazioni per la distribuzione sono inclusi nei sorgenti e nel setup.
