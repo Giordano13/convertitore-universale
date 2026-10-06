@@ -21,3 +21,9 @@ Lo ZIP contiene tutti i sorgenti, i test, la documentazione, il setup e i modell
 ## Licenza
 
 Il codice del progetto e distribuito con licenza **GNU AGPLv3**. Leggi [LICENSE](./LICENSE). Le dipendenze conservano le proprie licenze; gli avvisi e le informazioni per la distribuzione sono inclusi nei sorgenti e nel setup.
+
+## Sostieni il progetto
+
+Nel programma trovi il pulsante **Sostieni il progetto**. Le donazioni sono volontarie; la pagina donazioni non è ancora disponibile. Puoi già aiutare condividendo il progetto e segnalando problemi su GitHub.
+
+Per collegare la pagina dell’autore, inserire il suo indirizzo HTTPS nel campo `donation_url` di `release/support.json` e ricompilare il setup. Il programma apre il browser solo quando premi il pulsante e non raccoglie dati di pagamento.
