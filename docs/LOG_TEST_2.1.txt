@@ -1,0 +1,48 @@
+test_check_manifest_and_limits (test_distribution.DistributionTests.test_check_manifest_and_limits) ... ok
+test_download_rechecked_before_launch (test_distribution.DistributionTests.test_download_rechecked_before_launch) ... ok
+test_download_verified_progress (test_distribution.DistributionTests.test_download_verified_progress) ... ok
+test_failed_or_cancelled_download_no_partial (test_distribution.DistributionTests.test_failed_or_cancelled_download_no_partial) ... ok
+test_https_credentials_redirects (test_distribution.DistributionTests.test_https_credentials_redirects) ... ok
+test_package_models_and_sources (test_distribution.DistributionTests.test_package_models_and_sources) ... ok
+test_release_manifest_generated_from_actual_setup (test_distribution.DistributionTests.test_release_manifest_generated_from_actual_setup) ... ok
+test_release_version_and_product (test_distribution.DistributionTests.test_release_version_and_product) ... ok
+test_audio_video (test_engine.ConversionTests.test_audio_video) ... ok
+test_documents (test_engine.ConversionTests.test_documents) ... ok
+test_failure_cleanup_and_mixed_selection (test_engine.ConversionTests.test_failure_cleanup_and_mixed_selection) ... ok
+test_image_and_collisions (test_engine.ConversionTests.test_image_and_collisions) ... ok
+test_actual_ocr_image_and_scanned_pdf (test_extended.ExtendedTests.test_actual_ocr_image_and_scanned_pdf) ... ok
+test_all_pdf_pages (test_extended.ExtendedTests.test_all_pdf_pages) ... ok
+test_csv_excel_json (test_extended.ExtendedTests.test_csv_excel_json) ... ok
+test_missing_language_is_explained (test_extended.ExtendedTests.test_missing_language_is_explained) ... ok
+test_records_union_and_unicode (test_extended.ExtendedTests.test_records_union_and_unicode) ... ok
+test_selected_sheet_and_nested_json (test_extended.ExtendedTests.test_selected_sheet_and_nested_json) ... ok
+test_cancel_running_ffmpeg_cleans_output (test_features.FeatureTests.test_cancel_running_ffmpeg_cleans_output) ... ok
+test_file_info_actual_data (test_features.FeatureTests.test_file_info_actual_data) ... ok
+test_history_workflows_watch_stability (test_features.FeatureTests.test_history_workflows_watch_stability) ... ok
+test_images_pdf_and_searchable_ocr (test_features.FeatureTests.test_images_pdf_and_searchable_ocr) ... ok
+test_pdf_merge_split_rotate_compress (test_features.FeatureTests.test_pdf_merge_split_rotate_compress) ... ok
+test_real_raw_dng_development (test_features.FeatureTests.test_real_raw_dng_development) ... ok
+test_sevenzip_roundtrip_and_unsafe_paths (test_features.FeatureTests.test_sevenzip_roundtrip_and_unsafe_paths) ... ok
+test_trim_denoise_remux_audio_replace_and_progress (test_features.FeatureTests.test_trim_denoise_remux_audio_replace_and_progress) ... ok
+test_workflow_metadata_and_logo (test_features.FeatureTests.test_workflow_metadata_and_logo) ... ok
+test_animation (test_full.FullTests.test_animation) ... ok
+test_archive_all_containers_and_contents (test_full.FullTests.test_archive_all_containers_and_contents) ... ok
+test_epub_html_markdown (test_full.FullTests.test_epub_html_markdown) ... ok
+test_libreoffice_documents_and_spreadsheets (test_full.FullTests.test_libreoffice_documents_and_spreadsheets) ... ok
+test_libreoffice_presentation (test_full.FullTests.test_libreoffice_presentation) ... ok
+test_subtitles_timestamps_and_text (test_full.FullTests.test_subtitles_timestamps_and_text) ... ok
+test_svg_and_heic (test_full.FullTests.test_svg_and_heic) ... ok
+test_background_conversion_and_format_panels (test_gui.GuiTests.test_background_conversion_and_format_panels) ... ok
+test_filters_never_convert_hidden_rows (test_gui.GuiTests.test_filters_never_convert_hidden_rows) ... ok
+test_mixed_formats_recursive_import_and_saved_workflow (test_gui.GuiTests.test_mixed_formats_recursive_import_and_saved_workflow) ... ok
+test_preview_is_real_and_can_be_closed_during_work (test_gui.GuiTests.test_preview_is_real_and_can_be_closed_during_work) ... ok
+test_stop_queue_cancels_current_and_pending (test_gui.GuiTests.test_stop_queue_cancels_current_and_pending) ... ok
+test_theme_and_compact_controls (test_gui.GuiTests.test_theme_and_compact_controls) ... ok
+test_update_dialog_check_download_and_invalid_file (test_gui.GuiTests.test_update_dialog_check_download_and_invalid_file) ... This plugin does not support propagateSizeHints()
+ok
+test_watch_folder_actually_converts_new_file (test_gui.GuiTests.test_watch_folder_actually_converts_new_file) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 96.260s
+
+OK

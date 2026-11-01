@@ -1,0 +1,8 @@
+{
+  "manifest_url": "https://raw.githubusercontent.com/Giordano13/convertitore-universale/main/release/update.json",
+  "allowed_download_hosts": [
+    "github.com",
+    "release-assets.githubusercontent.com",
+    "objects.githubusercontent.com"
+  ]
+}

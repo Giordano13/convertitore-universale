@@ -12,11 +12,6 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
-      - name: Estrai i sorgenti del progetto
-        shell: pwsh
-        run: |
-          Expand-Archive -LiteralPath Convertitore_GitHub.zip -DestinationPath . -Force
-          Remove-Item -LiteralPath Convertitore_GitHub.zip
       - name: Configura il canale del repository
         run: python tools/configure_release.py --github "$env:GITHUB_REPOSITORY"
       - name: Installa librerie per compilare
@@ -24,7 +19,7 @@ jobs:
       - name: Verifica la sintassi PowerShell
         shell: powershell
         run: |
-          $files = @('tools/setup_source.ps1', 'tools/install_source.ps1', 'installer/install_components.ps1')
+          $files = @('tools/setup_source.ps1', 'tools/install_source.ps1', 'tools/build_native.ps1', 'installer/install_components.ps1')
           foreach ($file in $files) {
             $tokens = $null; $errors = $null
             [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
@@ -42,6 +37,16 @@ jobs:
         run: |
           python -m unittest discover -s tests -p test_distribution.py -v
           python -m unittest discover -s tests -p test_launcher.py -v
+      - name: Compila e verifica il modulo C++ e i nuovi formati
+        env:
+          PYTHONPATH: app
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File tools/build_native.ps1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s tests -p test_new_formats.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s tests -p test_reliability.py -v
       - name: Test dell'interfaccia
         env:
           PYTHONPATH: app

@@ -1,0 +1,89 @@
+VERIFICA REVISIONE LOCALE — 1 novembre 2026
+
+72 test superati; 0 errori; 0 test saltati.
+Python 3.13, Windows, PyQt6.
+FFmpeg 8.1.2 rilevato con WinGet; Tesseract e LibreOffice installati.
+Modulo C++ compilato con Visual C++ x64: hash verificati contro hashlib.
+Interfaccia controllata in tema scuro 1280x840 e chiaro 960x720.
+Validazione struttura/build e sintassi Python/PowerShell completata.
+Installer EXE non compilato. Nessuna pubblicazione GitHub.
+
+Il resoconto sostituisce, per questa revisione, le limitazioni dei controlli locali precedenti.
+
+test_check_manifest_and_limits (test_distribution.DistributionTests.test_check_manifest_and_limits) ... ok
+test_download_rechecked_before_launch (test_distribution.DistributionTests.test_download_rechecked_before_launch) ... ok
+test_download_verified_progress (test_distribution.DistributionTests.test_download_verified_progress) ... ok
+test_failed_or_cancelled_download_no_partial (test_distribution.DistributionTests.test_failed_or_cancelled_download_no_partial) ... ok
+test_https_credentials_redirects (test_distribution.DistributionTests.test_https_credentials_redirects) ... ok
+test_package_models_and_sources (test_distribution.DistributionTests.test_package_models_and_sources) ... ok
+test_release_manifest_generated_from_actual_setup (test_distribution.DistributionTests.test_release_manifest_generated_from_actual_setup) ... ok
+test_release_version_and_product (test_distribution.DistributionTests.test_release_version_and_product) ... ok
+test_audio_video (test_engine.ConversionTests.test_audio_video) ... ok
+test_documents (test_engine.ConversionTests.test_documents) ... ok
+test_failure_cleanup_and_mixed_selection (test_engine.ConversionTests.test_failure_cleanup_and_mixed_selection) ... ok
+test_image_and_collisions (test_engine.ConversionTests.test_image_and_collisions) ... ok
+test_actual_ocr_image_and_scanned_pdf (test_extended.ExtendedTests.test_actual_ocr_image_and_scanned_pdf) ... ok
+test_all_pdf_pages (test_extended.ExtendedTests.test_all_pdf_pages) ... ok
+test_csv_excel_json (test_extended.ExtendedTests.test_csv_excel_json) ... ok
+test_missing_language_is_explained (test_extended.ExtendedTests.test_missing_language_is_explained) ... ok
+test_records_union_and_unicode (test_extended.ExtendedTests.test_records_union_and_unicode) ... ok
+test_selected_sheet_and_nested_json (test_extended.ExtendedTests.test_selected_sheet_and_nested_json) ... ok
+test_cancel_running_ffmpeg_cleans_output (test_features.FeatureTests.test_cancel_running_ffmpeg_cleans_output) ... ok
+test_file_info_actual_data (test_features.FeatureTests.test_file_info_actual_data) ... ok
+test_history_workflows_watch_stability (test_features.FeatureTests.test_history_workflows_watch_stability) ... ok
+test_images_pdf (test_features.FeatureTests.test_images_pdf) ... ok
+test_pdf_merge_split_rotate_compress (test_features.FeatureTests.test_pdf_merge_split_rotate_compress) ... ok
+test_real_raw_dng_development (test_features.FeatureTests.test_real_raw_dng_development) ... ok
+test_searchable_ocr (test_features.FeatureTests.test_searchable_ocr) ... ok
+test_sevenzip_roundtrip_and_unsafe_paths (test_features.FeatureTests.test_sevenzip_roundtrip_and_unsafe_paths) ... ok
+test_trim_denoise_remux_audio_replace_and_progress (test_features.FeatureTests.test_trim_denoise_remux_audio_replace_and_progress) ... ok
+test_workflow_metadata_and_logo (test_features.FeatureTests.test_workflow_metadata_and_logo) ... ok
+test_animation (test_full.FullTests.test_animation) ... ok
+test_archive_all_containers_and_contents (test_full.FullTests.test_archive_all_containers_and_contents) ... ok
+test_epub_html_markdown (test_full.FullTests.test_epub_html_markdown) ... ok
+test_libreoffice_documents_and_spreadsheets (test_full.FullTests.test_libreoffice_documents_and_spreadsheets) ... ok
+test_libreoffice_presentation (test_full.FullTests.test_libreoffice_presentation) ... ok
+test_subtitles_timestamps_and_text (test_full.FullTests.test_subtitles_timestamps_and_text) ... ok
+test_svg_and_heic (test_full.FullTests.test_svg_and_heic) ... ok
+test_background_conversion_and_format_panels (test_gui.GuiTests.test_background_conversion_and_format_panels) ... ok
+test_checksum_dialog_matches_and_rejects_expected_digest (test_gui.GuiTests.test_checksum_dialog_matches_and_rejects_expected_digest) ... ok
+test_filters_never_convert_hidden_rows (test_gui.GuiTests.test_filters_never_convert_hidden_rows) ... ok
+test_mixed_formats_recursive_import_and_saved_workflow (test_gui.GuiTests.test_mixed_formats_recursive_import_and_saved_workflow) ... ok
+test_preview_is_real_and_can_be_closed_during_work (test_gui.GuiTests.test_preview_is_real_and_can_be_closed_during_work) ... ok
+test_retry_keeps_job_settings_and_remaps_removed_rows (test_gui.GuiTests.test_retry_keeps_job_settings_and_remaps_removed_rows) ... ok
+test_status_filter_catalog_and_new_data_category (test_gui.GuiTests.test_status_filter_catalog_and_new_data_category) ... ok
+test_stop_queue_cancels_current_and_pending (test_gui.GuiTests.test_stop_queue_cancels_current_and_pending) ... ok
+test_theme_and_compact_controls (test_gui.GuiTests.test_theme_and_compact_controls) ... ok
+test_update_dialog_check_download_and_invalid_file (test_gui.GuiTests.test_update_dialog_check_download_and_invalid_file) ... ok
+test_watch_folder_actually_converts_new_file (test_gui.GuiTests.test_watch_folder_actually_converts_new_file) ... ok
+test_background_process_receives_log_handles (test_launcher.LauncherTests.test_background_process_receives_log_handles) ... ok
+test_failure_preserves_complete_traceback (test_launcher.LauncherTests.test_failure_preserves_complete_traceback) ... ok
+test_missing_executable_reports_error (test_launcher.LauncherTests.test_missing_executable_reports_error) ... ok
+test_pythonw_uses_hidden_console_interpreter_for_error_logging (test_launcher.LauncherTests.test_pythonw_uses_hidden_console_interpreter_for_error_logging) ... ok
+test_success_with_spaces_in_path (test_launcher.LauncherTests.test_success_with_spaces_in_path) ... ok
+test_file_info_checksum_integration (test_new_formats.NewFormatTests.test_file_info_checksum_integration) ... ok
+test_hash_falls_back_if_library_cannot_load (test_new_formats.NewFormatTests.test_hash_falls_back_if_library_cannot_load) ... ok
+test_hash_native_and_python_match_on_empty_unicode_and_large_files (test_new_formats.NewFormatTests.test_hash_native_and_python_match_on_empty_unicode_and_large_files) ... ok
+test_jsonl_objects_arrays_and_roundtrip (test_new_formats.NewFormatTests.test_jsonl_objects_arrays_and_roundtrip) ... ok
+test_jsonl_reports_line_and_cleans_output (test_new_formats.NewFormatTests.test_jsonl_reports_line_and_cleans_output) ... ok
+test_new_image_outputs_and_inputs (test_new_formats.NewFormatTests.test_new_image_outputs_and_inputs) ... ok
+test_obsolete_path_binary_does_not_hide_compatible_winget_install (test_new_formats.NewFormatTests.test_obsolete_path_binary_does_not_hide_compatible_winget_install) ... ok
+test_real_opus_and_aiff_conversion (test_new_formats.NewFormatTests.test_real_opus_and_aiff_conversion) ... ok
+test_unicode_and_windows_text_encodings (test_new_formats.NewFormatTests.test_unicode_and_windows_text_encodings) ... ok
+test_failed_atomic_write_preserves_previous_state (test_reliability.ReliabilityTests.test_failed_atomic_write_preserves_previous_state) ... ok
+test_malformed_state_is_recoverable (test_reliability.ReliabilityTests.test_malformed_state_is_recoverable) ... ok
+test_missing_source_does_not_reserve_an_output (test_reliability.ReliabilityTests.test_missing_source_does_not_reserve_an_output) ... ok
+test_missing_watch_folder_is_rejected (test_reliability.ReliabilityTests.test_missing_watch_folder_is_rejected) ... ok
+test_original_and_existing_output_are_never_overwritten (test_reliability.ReliabilityTests.test_original_and_existing_output_are_never_overwritten) ... ok
+test_output_directory_created_and_paths_rejected (test_reliability.ReliabilityTests.test_output_directory_created_and_paths_rejected) ... ok
+test_partial_cleanup_reports_persistent_lock (test_reliability.ReliabilityTests.test_partial_cleanup_reports_persistent_lock) ... ok
+test_partial_cleanup_retries_temporary_windows_file_lock (test_reliability.ReliabilityTests.test_partial_cleanup_retries_temporary_windows_file_lock) ... ok
+test_pre_cancelled_job_does_not_start_a_process (test_reliability.ReliabilityTests.test_pre_cancelled_job_does_not_start_a_process) ... ok
+test_process_start_failure_cleans_reserved_output_and_temp_folder (test_reliability.ReliabilityTests.test_process_start_failure_cleans_reserved_output_and_temp_folder) ... ok
+test_watch_handles_deleted_pending_and_recreated_files (test_reliability.ReliabilityTests.test_watch_handles_deleted_pending_and_recreated_files) ... ok
+test_windows_csv_preserves_columns_quotes_and_multiline_cells (test_reliability.ReliabilityTests.test_windows_csv_preserves_columns_quotes_and_multiline_cells) ... ok
+
+----------------------------------------------------------------------
+Ran 72 tests in 272.275s
+
+OK

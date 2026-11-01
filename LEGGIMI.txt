@@ -1,0 +1,39 @@
+CONVERTITORE UNIVERSALE 2.1.2 - PARTI DA QUI
+
+Questo ZIP contiene il progetto ordinato e il sistema di installazione.
+Non contiene ancora un Setup.exe compilato su Windows.
+
+PER PROVARLO SUL TUO PC WINDOWS
+1. Estrai tutto lo ZIP: non eseguire i file direttamente dall'archivio.
+2. Apri Setup.vbs: Avanti, scegli i componenti, Installa.
+   Il wizard resta visibile durante l installazione, senza un CMD aperto.
+3. Apri Avvia.vbs oppure premi Avvia nel wizard.
+   In caso di errore usa Copia dettagli o Apri log nel wizard.
+   I vecchi file .bat sono scorciatoie compatibili e non restano aperti.
+
+PER CREARE IL SETUP DA PUBBLICARE
+1. Installa Inno Setup 6.3 o successivo da https://jrsoftware.org/isdl.php
+2. Apri CreaSetup.vbs.
+3. Nella cartella output troverai Setup.exe, sorgenti e SHA256SUMS.txt.
+   Il Setup.exe include l'app e non richiede Python al destinatario.
+
+ALTERNATIVA SENZA COMPILARE SUL TUO PC
+Il workflow GitHub incluso compila su Windows e produce file da scaricare
+come artifact. Non pubblica automaticamente la release.
+
+ORGANIZZAZIONE
+app       codice del programma
+installer setup Windows e modelli OCR
+release   configurazione del canale aggiornamenti
+tools     strumenti per setup, build e nuove versioni
+docs      istruzioni e guida alla pubblicazione
+tests     verifiche automatiche
+
+DOCUMENTI UTILI
+README.md                  avvio e funzioni della versione 2.1
+docs/PUBBLICAZIONE.md       GitHub, aggiornamenti e licenze
+docs/VERIFICHE_2.1.md       prove eseguite e limiti
+
+docs/VERIFICHE_2.1.1.md     nuovo wizard, log e verifiche della patch
+
+docs/CORREZIONE_2.1.2.md    setup con componenti gia installati

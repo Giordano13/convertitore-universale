@@ -1,0 +1,13 @@
+REPOSITORY: https://github.com/Giordano13/convertitore-universale
+
+La revisione estesa del 1 novembre 2026 include i sorgenti direttamente nella
+radice del repository, il nuovo ZIP e il resoconto dei test.
+Il workflow compila questi sorgenti; non estrae il vecchio Convertitore_GitHub.zip.
+
+Non caricare .venv, token, password, build temporanee o certificati.
+La licenza del progetto è GNU AGPLv3: leggi LICENSE.
+
+Il vecchio installer 2.1.2 e il manifest degli aggiornamenti restano invariati.
+Per pubblicare un nuovo installer assegna una nuova versione, esegui e verifica
+la build Windows, carica l'EXE e solo dopo aggiorna release/update.json.
+Non presentare il vecchio installer come contenente la nuova revisione.
